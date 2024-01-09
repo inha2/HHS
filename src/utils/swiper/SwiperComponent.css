@@ -1,0 +1,55 @@
+/* reset */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul,
+li {
+    list-style: none;
+}
+
+.notify-wrap {
+    position: relative;
+    background: black;
+}
+.notify-wrap-inner {
+    padding: 0 20px;
+    background: black;
+    text-align: center;
+}
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.notify-scroll {
+    display: inline-block;
+    animation: text-scroll 100s linear infinite;
+}
+@keyframes text-scroll {
+    from {
+        transform: translateX(20%);
+        -moz-transform: translateX(20%);
+        -webkit-transform: translateX(20%);
+        -o-transform: translateX(20%);
+        -ms-transform: translateX(20%);
+    }
+    to {
+        transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+    }
+}
+.notify-scroll ul {
+    display: inline;
+    font-weight: bold;
+}
+.notify-scroll ul li {
+    display: inline-block;
+    padding-right: 350px;
+    font-size: 13px;
+    color: white;
+    line-height: 38px;
+}

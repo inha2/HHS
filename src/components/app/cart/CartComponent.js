@@ -6,3 +6,14 @@ function CartComponent() {
 }
 
 export default CartComponent;
+
+// cart-container->cart-logo-section->cart-logo-section-0img-wrap-
+
+// <div className="cart-container">
+//     <div className="cart-logo-section">
+//         <image className="cart-logo-section-img-wrap">
+//             ogo</image>
+//     </div>
+//     <div className="cart-nav-sction"></div>
+//     <div className="cart-accout-section"></div>
+// </div>;
