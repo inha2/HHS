@@ -1,2 +1,65 @@
-
-
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+.header-logo-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header-logo-section img {
+    width: 92.65px;
+    height: 22px;
+}
+.header-nav-section ul {
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.header-apparel-content-section {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    cursor: pointer;
+}
+.header-apparel-content-section ul li {
+    padding-bottom: 10px;
+}
+.header-apparel-content-section ul li:first-child {
+    font-weight: 500;
+}
+.header-accont-section ul {
+    display: flex;
+    color: #999999;
+    font-size: 12px;
+    cursor: pointer;
+}
+.header-accont-section ul li:first-child::after {
+    content: '|';
+    padding: 0 5px 0 5px;
+}
+.header-apparel-content-section ul li:nth-child(n + 2) {
+    color: #999999;
+    font-weight: 400;
+}
+.header-apparel-content-section ul li:nth-child(n + 2):hover {
+    color: black;
+}
+.header-accont-section {
+    display: flex;
+    align-items: center;
+}
+.header-etc-content-section {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+}
+.header-etc-content-section ul {
+    display: flex;
+    gap: 30px;
+}
