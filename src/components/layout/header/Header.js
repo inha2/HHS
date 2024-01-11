@@ -4,6 +4,20 @@ import './Header.css';
 import SwiperComponent from '../../../utils/swiper/SwiperComponent';
 function Header() {
     const title = '2024 뉴이어 세일, 최대 70% 할인!';
+    const [isApparelHoverd, setIsApparelHoverd] = useState(false);
+    const [apparelHoverdClassName, setApparelHoverdClassName] = useState('header-apparel-content-section');
+    const [accHoverdClassName, setAccHoverdClassName] = useState('header-etc-content-section');
+    const onMouseOverApparelHandle = () => {
+        setAccHoverdClassName('header-etc-content-section');
+        setApparelHoverdClassName('header-apparel-content-section-show');
+    };
+    const onMouseOverAccHandle = () => {
+        setApparelHoverdClassName('header-apparel-content-section');
+        setAccHoverdClassName('header-etc-content-section-show');
+    };
+    const onMouseOutHandle = () => {
+        console.log('bye');
+    };
     return (
         <div>
             <SwiperComponent param={title} />
@@ -17,10 +31,10 @@ function Header() {
                             <strong>BEST</strong>
                         </li>
                         <li>
-                            <strong>APPAREL</strong>
+                            <strong onMouseOver={onMouseOverApparelHandle}>APPAREL</strong>
                         </li>
                         <li>
-                            <strong>ACC</strong>
+                            <strong onMouseOver={onMouseOverAccHandle}>ACC</strong>
                         </li>
                     </ul>
                 </div>
@@ -32,8 +46,8 @@ function Header() {
                 </div>
             </div>
             <div className="header-nav-content-container">
-                <div className="header-apparel-content-section">
-                    <ul>
+                <div className={apparelHoverdClassName}>
+                    <ul onMouseOut={onMouseOutHandle}>
                         <li>상의</li>
                         <li>티셔츠</li>
                         <li>트랙탑</li>
@@ -41,7 +55,6 @@ function Header() {
                         <li>후드</li>
                         <li>스웨터/가디건</li>
                     </ul>
-
                     <ul>
                         <li>하의</li>
                         <li>트랙팬츠</li>
@@ -51,7 +64,7 @@ function Header() {
                         <li>레깅스</li>
                     </ul>
                 </div>
-                <div class="header-etc-content-section">
+                <div className={accHoverdClassName}>
                     <ul>
                         <li>전체</li>
                         <li>가방</li>
@@ -74,33 +87,3 @@ export default Header;
 //     <div className="cart-nav-sction"></div>
 //     <div className="cart-accout-section"></div>
 // </div>;
-{
-    /* <li>
-상의
-<ul>
-    <li>티셔츠</li>
-    <li>트랙탑</li>
-    <li>스웻셔츠</li>
-    <li>후드</li>
-    <li>스웨터/가디건</li>
-</ul>
-</li>
-<li>
-하의
-<ul>
-    <li>트랙팬츠</li>
-    <li>우븐팬츠</li>
-    <li>스웻팬츠</li>
-    <li>반바지/스커트</li>
-    <li>레깅스</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-ACC
-<ul>
-<li>전체</li>
-<li>가방</li>
-<li>모자</li> */
-}

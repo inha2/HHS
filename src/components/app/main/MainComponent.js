@@ -2,7 +2,27 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './MainComponent.css';
 function MainComponent() {
-    return <div>메인 페이지</div>;
+    const onMouseOutHandle = () => {
+        console.log('12312323');
+    };
+    return (
+        <div onMouseOver={onMouseOutHandle}>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+        </div>
+    );
 }
 
 export default MainComponent;

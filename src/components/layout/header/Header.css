@@ -18,18 +18,69 @@
     cursor: pointer;
     font-size: 15px;
 }
+.header-nav-section ul li strong::after,
+.header-nav-section ul li strong::before {
+    content: ''; /* 가상 요소에 내용 추가 */
+    box-sizing: border-box; /* 테두리와 안쪽 여백이 요소의 크기에 영향을 미치지 않도록 설정 */
+    display: block; /* 내용이 없는 경우에도 크기가 유지되도록 block 요소로 설정 */
+    height: 2px; /* 높이를 2px로 설정 (보더의 두께) */
+    width: 0; /* 초기에는 너비를 0으로 설정 */
+    transition: width 300ms ease-in-out; /* width 속성에 애니메이션 적용 */
+    background-color: transparent; /* 초기 상태의 투명한 배경색 */
+}
+
+.header-nav-section ul li strong::before {
+    transition: width 150ms ease-in-out; /* width 속성에 애니메이션 적용 */
+}
+
+.header-nav-section ul li strong:hover::after,
+.header-nav-section ul li strong:hover::before {
+    width: 100%; /* 호버할 때 너비를 100%로 확장하여 보더가 나타나게 함 */
+    background-color: black; /* 호버할 때 배경색 변경 */
+}
+
 .header-apparel-content-section {
     display: flex;
     justify-content: center;
     list-style: none;
     cursor: pointer;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: left;
+    z-index: 999;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
+.header-apparel-content-section-show {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    cursor: pointer;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: left;
+    z-index: 999;
+    background-color: #ffffff;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
 .header-apparel-content-section ul li {
     padding-bottom: 10px;
 }
 .header-apparel-content-section ul li:first-child {
     font-weight: 500;
 }
+.header-apparel-content-section-show ul li {
+    padding-bottom: 10px;
+}
+.header-apparel-content-section-show ul li:first-child {
+    font-weight: 500;
+}
+
 .header-accont-section ul {
     display: flex;
     color: #999999;
@@ -47,6 +98,13 @@
 .header-apparel-content-section ul li:nth-child(n + 2):hover {
     color: black;
 }
+.header-apparel-content-section-show ul li:nth-child(n + 2) {
+    color: #999999;
+    font-weight: 400;
+}
+.header-apparel-content-section-show ul li:nth-child(n + 2):hover {
+    color: black;
+}
 .header-accont-section {
     display: flex;
     align-items: center;
@@ -58,8 +116,41 @@
     cursor: pointer;
     font-weight: 500;
     font-size: 15px;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: left;
+    z-index: 999;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
 .header-etc-content-section ul {
     display: flex;
     gap: 30px;
+}
+
+.header-etc-content-section-show {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: left;
+    z-index: 999;
+    background-color: #ffffff;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+.header-etc-content-section-show ul {
+    display: flex;
+    gap: 30px;
+}
+.header-nav-content-container {
+    width: 100%;
+    height: auto;
 }
