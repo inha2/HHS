@@ -40,12 +40,12 @@
 }
 
 .header-apparel-content-section {
-    display: flex;
+    display: none;
     justify-content: center;
     list-style: none;
     cursor: pointer;
     position: absolute;
-    top: 80px;
+    /* top: 80px; */
     width: 100%;
     text-align: left;
     z-index: 999;
@@ -59,7 +59,7 @@
     list-style: none;
     cursor: pointer;
     position: absolute;
-    top: 80px;
+    /* top: 80px; */
     width: 100%;
     text-align: left;
     z-index: 999;
@@ -110,17 +110,17 @@
     align-items: center;
 }
 .header-etc-content-section {
-    display: flex;
+    display: none;
     justify-content: center;
     list-style: none;
     cursor: pointer;
     font-weight: 500;
     font-size: 15px;
     position: absolute;
-    top: 80px;
+    /* top: 80px; */
     width: 100%;
     text-align: left;
-    z-index: 999;
+    /* z-index: 999; */
     background-color: #ffffff;
     opacity: 0;
     transition: all 0.2s ease-in-out;
@@ -138,10 +138,10 @@
     font-weight: 500;
     font-size: 15px;
     position: absolute;
-    top: 80px;
+    /* top: 80px; */
     width: 100%;
     text-align: left;
-    z-index: 999;
+    /* z-index: 999; */
     background-color: #ffffff;
     opacity: 1;
     transition: all 0.2s ease-in-out;

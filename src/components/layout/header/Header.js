@@ -4,20 +4,25 @@ import './Header.css';
 import SwiperComponent from '../../../utils/swiper/SwiperComponent';
 function Header() {
     const title = '2024 뉴이어 세일, 최대 70% 할인!';
-    const [isApparelHoverd, setIsApparelHoverd] = useState(false);
-    const [apparelHoverdClassName, setApparelHoverdClassName] = useState('header-apparel-content-section');
-    const [accHoverdClassName, setAccHoverdClassName] = useState('header-etc-content-section');
+    const [apparelHoverClassName, setApparelHoverClassName] = useState('header-apparel-content-section');
+    const [accHoverClassName, setAccHoverClassName] = useState('header-etc-content-section');
     const onMouseOverApparelHandle = () => {
-        setAccHoverdClassName('header-etc-content-section');
-        setApparelHoverdClassName('header-apparel-content-section-show');
+        setAccHoverClassName('header-etc-content-section');
+        setApparelHoverClassName('header-apparel-content-section-show');
     };
     const onMouseOverAccHandle = () => {
-        setApparelHoverdClassName('header-apparel-content-section');
-        setAccHoverdClassName('header-etc-content-section-show');
+        setApparelHoverClassName('header-apparel-content-section');
+        setAccHoverClassName('header-etc-content-section-show');
     };
-    const onMouseOutHandle = () => {
-        console.log('bye');
+    const onMouseLeaveHandle = () => {
+        setAccHoverClassName('header-etc-content-section');
+        setApparelHoverClassName('header-apparel-content-section');
     };
+    const onMouseOverBestHandle = () => {
+        setAccHoverClassName('header-etc-content-section');
+        setApparelHoverClassName('header-apparel-content-section');
+    };
+
     return (
         <div>
             <SwiperComponent param={title} />
@@ -28,7 +33,7 @@ function Header() {
                 <div className="header-nav-section">
                     <ul>
                         <li>
-                            <strong>BEST</strong>
+                            <strong onMouseOver={onMouseOverBestHandle}>BEST</strong>
                         </li>
                         <li>
                             <strong onMouseOver={onMouseOverApparelHandle}>APPAREL</strong>
@@ -46,8 +51,8 @@ function Header() {
                 </div>
             </div>
             <div className="header-nav-content-container">
-                <div className={apparelHoverdClassName}>
-                    <ul onMouseOut={onMouseOutHandle}>
+                <div onMouseLeave={onMouseLeaveHandle} className={apparelHoverClassName}>
+                    <ul>
                         <li>상의</li>
                         <li>티셔츠</li>
                         <li>트랙탑</li>
@@ -64,7 +69,7 @@ function Header() {
                         <li>레깅스</li>
                     </ul>
                 </div>
-                <div className={accHoverdClassName}>
+                <div onMouseLeave={onMouseLeaveHandle} className={accHoverClassName}>
                     <ul>
                         <li>전체</li>
                         <li>가방</li>
