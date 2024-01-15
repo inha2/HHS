@@ -1,0 +1,16 @@
+/* styles.css 또는 원하는 CSS 파일에 추가 */
+.swiper-pagination-bullet {
+    width: 150px; /* 원하는 너비 설정 */
+    height: 3px; /* 원하는 높이 설정 */
+    background-color: #fff; /* 기본 색상 설정 */
+    opacity: 0.1; /* 기본 투명도 설정 */
+    transition: background-color 0.3s; /* 색상 전환 효과를 위한 transition 추가 */
+    border-radius: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff; /* 활성화된 pagination 색상 설정 */
+    opacity: 1; /* 선택 시 투명도 조절 */
+}
