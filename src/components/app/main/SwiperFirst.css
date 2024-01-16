@@ -14,3 +14,35 @@
     background-color: #fff; /* 활성화된 pagination 색상 설정 */
     opacity: 1; /* 선택 시 투명도 조절 */
 }
+.swiper {
+    cursor: pointer;
+}
+.slide-content {
+    position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    left: 10%;
+    padding-right: 30px;
+    bottom: 15%;
+    color: #fff;
+    transition: opacity 2s ease-in-out; /* 투명도에 대한 트랜지션 설정 */
+    z-index: 5;
+}
+.swiper-first-text1 {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+.swiper-first-text2 {
+    font-size: 28px;
+    font-weight: 500;
+}
+.swiper-first-text3 {
+    font-size: 20px;
+    font-weight: 200;
+}
+.text-overlay .visible {
+    opacity: 1;
+}

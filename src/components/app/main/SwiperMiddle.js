@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './SwiperMiddle.css';
 
-const SwiperMiddle = ({ param }) => {
+const SwiperMiddle = () => {
     return (
         <section class="notify-wrap-middle">
             <div class="notify-wrap-inner-middle ellipsis">

@@ -10,6 +10,7 @@ li {
 
 .notify-wrap-middle {
     position: relative;
+    cursor: pointer;
 }
 .notify-wrap-inner-middle {
     padding: 0 20px;
@@ -50,5 +51,4 @@ li {
     padding-right: 0;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.35);
-    line-height: 38px;
 }
