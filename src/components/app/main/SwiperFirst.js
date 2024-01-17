@@ -45,7 +45,16 @@ function SwiperFirstComponent() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <img src="img/main1.png" />
+                <div className="slide-content">
+                    <img src="img/main1.png" alt="Slide 1" />
+                    {isTextVisible && (
+                        <div className={`text-overlay ${isTextVisible ? 'visible' : ''}`}>
+                            <p className="swiper-first-text1">01.13 - 03.31 </p>
+                            <p className="swiper-first-text2"> DISNEY x NERDY </p>
+                            <p className="swiper-first-text3"> 디즈니 100주년 기념 콜라보 컬렉션 </p>
+                        </div>
+                    )}
+                </div>
             </SwiperSlide>
             <SwiperSlide>
                 <img src="img/main1.png" />

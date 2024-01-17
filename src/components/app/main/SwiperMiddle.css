@@ -52,3 +52,16 @@ li {
     font-size: 13px;
     color: rgba(0, 0, 0, 0.35);
 }
+.swiper-middle-finger-icon {
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    color: black;
+    padding: 10px 0 0 50px;
+    animation: none;
+}
+.swiper-middle-finger-icon img {
+    height: 35px;
+    margin-right: 5px;
+    animation: none;
+}
