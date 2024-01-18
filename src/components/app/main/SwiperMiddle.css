@@ -58,10 +58,13 @@ li {
     font-weight: 300;
     color: black;
     padding: 10px 0 0 50px;
-    animation: none;
+    position: fixed;
+    top: 100; /* 필요에 따라 이 값을 조절하세요 */
+    left: 100; /* 필요에 따라 이 값을 조절하세요 */
+    z-index: 9999;
 }
 .swiper-middle-finger-icon img {
     height: 35px;
     margin-right: 5px;
-    animation: none;
+    position: fixed;
 }
