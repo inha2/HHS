@@ -48,7 +48,7 @@
     /* top: 80px; */
     width: 100%;
     text-align: left;
-    z-index: 999;
+    z-index: 2;
     background-color: #ffffff;
     opacity: 0;
     transition: all 0.2s ease-in-out;
@@ -62,7 +62,7 @@
     /* top: 80px; */
     width: 100%;
     text-align: left;
-    z-index: 999;
+    z-index: 2;
     background-color: #ffffff;
     opacity: 1;
     transition: all 0.2s ease-in-out;
@@ -120,7 +120,6 @@
     /* top: 80px; */
     width: 100%;
     text-align: left;
-    /* z-index: 999; */
     background-color: #ffffff;
     opacity: 0;
     transition: all 0.2s ease-in-out;
@@ -141,7 +140,7 @@
     /* top: 80px; */
     width: 100%;
     text-align: left;
-    /* z-index: 999; */
+    z-index: 999;
     background-color: #ffffff;
     opacity: 1;
     transition: all 0.2s ease-in-out;
