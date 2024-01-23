@@ -1,2 +1,74 @@
-
-
+.signup-container {
+    width: 580px;
+    margin: 0 auto;
+}
+.signup-info-title {
+    font-weight: 700;
+    font-size: 25px;
+}
+.signup-info-essential {
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    padding: 60px 0 15px;
+}
+.signup-info-id {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    align-items: baseline;
+}
+.signup-info-check-password {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+    align-items: baseline;
+}
+.signup-info-password {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+.signup-info-email {
+    display: flex;
+    align-items: baseline;
+}
+.signup-info-text {
+    font-weight: 500;
+    font-size: 19px;
+    width: 130px;
+    align-items: baseline;
+}
+.signup-info-text-input {
+    width: 200px;
+    height: 45px;
+    border: 1px solid #dedede;
+    align-items: baseline;
+}
+.signup-info-check-password input {
+    width: 448px;
+    height: 45px;
+    border: 1px solid #dedede;
+    align-items: baseline;
+}
+.signup-info-email-input {
+    width: 448px;
+    height: 45px;
+    border: 1px solid #dedede;
+    align-items: baseline;
+}
+.signup-info-section {
+    padding: 20px 0;
+    align-items: baseline;
+}
+.signup-button {
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+    line-height: 60px;
+    height: 60px;
+    font-weight: 600;
+    border: none;
+}

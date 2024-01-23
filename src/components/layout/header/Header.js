@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
-import SwiperComponent from '../../../utils/swiper/SwiperComponent';
 function Header() {
-    const title = '2024 뉴이어 세일, 최대 70% 할인!';
     const [apparelHoverClassName, setApparelHoverClassName] = useState('header-apparel-content-section');
     const [accHoverClassName, setAccHoverClassName] = useState('header-etc-content-section');
     const [mouseOnFlag, setMouseOnFlag] = useState(0);
@@ -30,7 +28,6 @@ function Header() {
 
     return (
         <div>
-            <SwiperComponent param={title} />
             <div>
                 <div className="header-container">
                     <div className="header-logo-section">
