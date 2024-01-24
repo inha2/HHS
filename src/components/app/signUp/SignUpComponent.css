@@ -1,6 +1,7 @@
 .signup-container {
     width: 580px;
     margin: 0 auto;
+    padding-top: 50px;
 }
 .signup-info-title {
     font-weight: 700;
@@ -45,18 +46,21 @@
     height: 45px;
     border: 1px solid #dedede;
     align-items: baseline;
+    padding: 0 14px;
 }
 .signup-info-check-password input {
-    width: 448px;
+    width: 420px;
     height: 45px;
     border: 1px solid #dedede;
     align-items: baseline;
+    padding: 0 14px;
 }
 .signup-info-email-input {
-    width: 448px;
+    width: 420px;
     height: 45px;
     border: 1px solid #dedede;
     align-items: baseline;
+    padding: 0 14px;
 }
 .signup-info-section {
     padding: 20px 0;
@@ -71,4 +75,5 @@
     height: 60px;
     font-weight: 600;
     border: none;
+    cursor: pointer;
 }
