@@ -1,0 +1,45 @@
+.product-detail-component {
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1400px;
+    padding-top: 60px;
+    margin: 0 auto;
+}
+.product-detail-h1 {
+    display: inline-block;
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 20px 0 0;
+}
+.product-detail-normal {
+    align-items: center;
+    display: flex;
+    margin: 0 0 50px;
+}
+.product-detail-ul {
+    display: flex;
+    gap: 20px;
+}
+.product-detail-count {
+    font-size: 14px;
+    font-weight: 400;
+}
+.product-detail-img-section-ul {
+    display: flex;
+    flex-wrap: wrap; /* 아이템이 넘칠 경우 줄 바꿈 */
+    justify-content: center;
+    gap: 10px;
+}
+
+.product-detail-img-section-ul li {
+    flex: 0 0 calc(20% - 10px); /* 아이템의 너비 지정 */
+    /* padding: 0 10px; 아이템의 좌우 여백 설정 */
+    box-sizing: border-box; /* 패딩과 테두리를 포함하여 너비 계산 */
+    display: flex; /* 아이템 내의 내용을 수평으로 정렬하기 위해 */
+    justify-content: center; /* 내용을 가운데 정렬하기 위해 */
+}
+.product-detail-img-section-ul li img {
+    max-width: 100%; /* 이미지가 아이템의 너비를 초과하지 않도록 */
+    height: auto; /* 이미지의 높이를 자동으로 조정하여 비율 유지 */
+}
