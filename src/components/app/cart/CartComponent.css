@@ -7,7 +7,6 @@
 .cart-title-wrap {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid black;
     padding-bottom: 20px;
 }
 .cart-title-delete-content {
@@ -21,6 +20,7 @@
     /* background-color: aqua; */
     width: 40%;
     padding-left: 40px;
+    padding-top: 117px;
 }
 .cart-title-checkbox-wrap input {
     width: 20px;
@@ -83,4 +83,54 @@
     color: #9b9b9b;
     text-decoration: line-through;
     margin-bottom: 4px;
+}
+.cart-all-price-section {
+    display: flex;
+    justify-content: space-between;
+    color: #606060;
+}
+.cart-all-discount-section {
+    display: flex;
+    justify-content: space-between;
+    color: #606060;
+}
+.cart-delivery-section {
+    display: flex;
+    justify-content: space-between;
+    color: #606060;
+}
+.cart-price-button button {
+    height: 60px;
+    width: 100%;
+    background: #242424;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+.cart-price-button {
+    padding-top: 30px;
+}
+.cart-right-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 25px 0;
+}
+.cart-right-wrap strong {
+    font-size: 24px;
+    font-weight: 600;
+}
+.cart-left-section h2 {
+    font-size: 25px;
+    font-weight: 900;
+}
+.cart-price-font {
+    font-weight: 600;
+    color: #000000;
+}
+.cart-cloth-title-name {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
 }

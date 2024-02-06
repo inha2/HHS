@@ -13,6 +13,7 @@ function CartComponent() {
                     </div>
                     <div className="cart-title-delete-content">선택삭제</div>
                 </div>
+                <hr />
                 <div className="cart-item-all-section">
                     <div className="cart-item-title-wish-wrap">
                         <div className="cart-item-title-check-wrap">
@@ -20,7 +21,7 @@ function CartComponent() {
                                 <input type="checkbox" />
                             </div>
                             <div className="cart-item-title-name-content">
-                                <span>파이핑 블러자켓 블랙</span>
+                                <span className="cart-cloth-title-name">파이핑 블러자켓 블랙</span>
                             </div>
                         </div>
                         <div className="cart-item-wish-del-wrap">
@@ -52,7 +53,50 @@ function CartComponent() {
                     </div>
                 </div>
             </div>
-            <div className="cart-right-section">ddddd</div>
+            <div className="cart-right-section">
+                <hr />
+                <div className="cart-right-wrap">
+                    <strong>결제내역</strong>
+                    <div className="cart-all-price-section">
+                        <div>
+                            <span>총 상품금액</span>
+                        </div>
+                        <div>
+                            <span className="cart-price-font">627,000 원</span>
+                        </div>
+                    </div>
+                    <div className="cart-all-discount-section">
+                        <div>
+                            <span>총 할인금액</span>
+                        </div>
+                        <div>
+                            <span className="cart-price-font">627,000 원</span>
+                        </div>
+                    </div>
+                    <div className="cart-delivery-section">
+                        <div>
+                            <span>배송비</span>
+                        </div>
+                        <div>
+                            <span className="cart-price-font">627,000 원</span>
+                        </div>
+                    </div>
+                    <div>
+                        <hr />
+                    </div>
+                    <div className="cart-all-price-section">
+                        <div>
+                            <span>총 결제금액</span>
+                        </div>
+                        <div>
+                            <span className="cart-price-font">627,000 원</span>
+                        </div>
+                    </div>
+                    <div className="cart-price-button">
+                        <button>총 2개 결제하기</button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
