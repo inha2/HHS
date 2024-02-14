@@ -38,7 +38,12 @@ function SignUpComponent() {
             alert('이메일을 입력하세요');
             return;
         }
+        const idRegex = /^[A-Za-z]+$/;
 
+        if (userId && !idRegex.test(userId)) {
+            alert('아이디 형식이 올바르지 않습니다.');
+            return;
+        }
         if (userPassword !== userCheckPassword) {
             alert('비밀번호가 일치하지 않아용ㅎ');
             return;
@@ -51,22 +56,23 @@ function SignUpComponent() {
         }
 
         const body = {
-            userId: 'userId',
+            userId: userId,
             password: userPassword,
             email: userEmail,
         };
 
-        axios
+        await axios
             .post('http://localhost:4000/v1/user', body)
             .then((res) => {
                 console.log(res.status);
-                if (res.status === 200) {
+                if (res.status === 201) {
                     alert('가입 됐습니다.');
                     navigate('/');
                 }
             })
             .catch((error) => {
                 console.log(error);
+                alert(error.response.data.error);
             });
     };
 
@@ -87,8 +93,18 @@ function SignUpComponent() {
                 <div className="signup-info-password">
                     <p className="signup-info-text">비밀번호</p>
                     <div className="signup-info-check-password">
-                        <input onChange={onChangeTextValue} id="signupPassword" placeholder="비밀번호" />
-                        <input onChange={onChangeTextValue} id="signupCheckPassword" placeholder="비밀번호 확인" />
+                        <input
+                            type="password"
+                            onChange={onChangeTextValue}
+                            id="signupPassword"
+                            placeholder="비밀번호"
+                        />
+                        <input
+                            type="password"
+                            onChange={onChangeTextValue}
+                            id="signupCheckPassword"
+                            placeholder="비밀번호 확인"
+                        />
                     </div>
                 </div>
                 <div className="signup-info-email">

@@ -31,13 +31,18 @@ function Header() {
         console.log('a');
         navigate('/signup');
     };
-
+    const goLogin = () => {
+        navigate('/login');
+    };
+    const goMain = () => {
+        navigate('/');
+    };
     return (
         <div>
             <div>
                 <div className="header-container">
                     <div className="header-logo-section">
-                        <img src="img/logo_blank.png" />
+                        <img onClick={goMain} src="img/logo_blank.png" />
                     </div>
                     <div className="header-nav-section">
                         <ul>
@@ -58,7 +63,7 @@ function Header() {
                     </div>
                     <div className="header-accont-section">
                         <ul>
-                            <li>로그인</li>
+                            <li onClick={goLogin}>로그인</li>
                             <li onClick={goSignup}>회원가입</li>
                         </ul>
                     </div>
