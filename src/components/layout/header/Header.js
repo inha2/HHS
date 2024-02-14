@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 function Header() {
+    const navigate = useNavigate();
     const [apparelHoverClassName, setApparelHoverClassName] = useState('header-apparel-content-section');
     const [accHoverClassName, setAccHoverClassName] = useState('header-etc-content-section');
     const [mouseOnFlag, setMouseOnFlag] = useState(0);
@@ -24,6 +25,11 @@ function Header() {
     const onMouseOverBestHandle = () => {
         setAccHoverClassName('header-etc-content-section');
         setApparelHoverClassName('header-apparel-content-section');
+    };
+
+    const goSignup = () => {
+        console.log('a');
+        navigate('/signup');
     };
 
     return (
@@ -53,7 +59,7 @@ function Header() {
                     <div className="header-accont-section">
                         <ul>
                             <li>로그인</li>
-                            <li>회원가입</li>
+                            <li onClick={goSignup}>회원가입</li>
                         </ul>
                     </div>
                 </div>
