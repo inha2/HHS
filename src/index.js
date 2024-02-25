@@ -17,7 +17,8 @@ import MyPage from '../src/pages/MyPage';
 import ReviewPage from '../src/pages/ReviewPage';
 import SignUpPage from '../src/pages/SignUpPage';
 import TopPage from '../src/pages/TopPage';
-import ProductDetailComponent from '../src/components/app/productDetail/ProductDetailComponent';
+import DetailPage from '../src/pages/DetailPage';
+import ListPage from '../src/pages/ListPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -34,7 +35,8 @@ root.render(
             <Route path="/review" element={<ReviewPage />}></Route>
             <Route path="/signup" element={<SignUpPage />}></Route>
             <Route path="/top" element={<TopPage />}></Route>
-            <Route path="/detail" element={<ProductDetailComponent />}></Route>
+            <Route path="/list" element={<ListPage />}></Route>
+            <Route path="/detail" element={<DetailPage />}></Route>
         </Routes>
         <Footer />
     </BrowserRouter>
