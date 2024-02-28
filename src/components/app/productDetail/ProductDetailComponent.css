@@ -85,3 +85,79 @@
     color: black;
     background-color: white;
 }
+.detail-top-delivery-shopping {
+    display: flex;
+    color: #999999;
+    text-align: center;
+    line-height: 50px;
+    height: 41px;
+    margin: 20px 0;
+}
+.detail-top-delivery-information {
+    width: 50%;
+}
+.detail-top-shopping-tip {
+    width: 50%;
+}
+.height {
+    height: 105px;
+}
+.detail-middle-details {
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 20px;
+}
+.detail-middle-product-detail {
+    width: 600px;
+}
+.detail-middle-size {
+    width: 600px;
+}
+.detail-img {
+    width: 700px;
+    height: 700px;
+    justify-content: center;
+}
+.detail-middle-product-imgs {
+    display: flex;
+}
+.accordion-section {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.accordion-container {
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.accordion-title {
+    border-top: 1px solid black;
+    padding: 19px 0;
+}
+
+/* custom-accordion.css */
+/* AccordionItemButton의 화살표 아이콘 스타일링 */
+.accordion__button .arrow-up,
+.accordion__button .arrow-down {
+    font-size: 16px;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* 위쪽 화살표 스타일 */
+.accordion__button .arrow-up::before {
+    content: '\25B2'; /* 위쪽 화살표 */
+}
+
+/* 아래쪽 화살표 스타일 */
+.accordion__button .arrow-down::before {
+    content: '\25BC'; /* 아래쪽 화살표 */
+}
+
+/* 열린 AccordionItemPanel의 스타일링 */
+.accordion__item--expanded .accordion__button .arrow-up::before {
+    transform: rotate(180deg);
+}
