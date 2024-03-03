@@ -136,6 +136,7 @@
 .accordion-title {
     border-top: 1px solid black;
     padding: 19px 0;
+    border-bottom: 1px solid #eeeeee;
 }
 
 /* custom-accordion.css */
@@ -160,4 +161,79 @@
 /* 열린 AccordionItemPanel의 스타일링 */
 .accordion__item--expanded .accordion__button .arrow-up::before {
     transform: rotate(180deg);
+}
+th {
+    background-color: #f5f5f5;
+    border-left: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding: 5px 0;
+}
+table {
+    border: 1px solid #cccccc;
+    border-collapse: collapse;
+    text-align: center;
+    width: 750px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.table-all {
+    padding: 10px 0 40px 0;
+}
+td {
+    border-left: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding: 5px 3px;
+}
+li {
+    margin-bottom: 14px;
+}
+.detail-name {
+    display: inline-block;
+    width: 130px;
+    font-size: 12px;
+}
+.detail-content {
+    color: black;
+    font-weight: 100;
+    font-size: 12px;
+}
+.table-content {
+    font-size: 12px;
+}
+.table-content::before {
+    content: '- '; /* 마커 내용 */
+    color: black; /* 마커 색상 */
+}
+.detail-washing::before {
+    content: '- ';
+    color: black;
+}
+.detail-washing {
+    font-size: 12px;
+    font-weight: 100;
+}
+.detail-washing-all {
+    padding: 10px 0 30px 0;
+}
+.detail-payment {
+    font-size: 12px;
+    font-weight: 100;
+}
+.detail-payment-all {
+    padding: 10px 0 30px 0;
+}
+.detail-delivery {
+    font-size: 12px;
+    font-weight: 100;
+}
+.detail-change {
+    font-size: 12px;
+    font-weight: 100;
+}
+.detail-change-bold {
+    font-size: 14px;
+    padding-top: 10px;
+}
+.detail-change-div {
+    padding: 20px 0 40px 0;
 }
