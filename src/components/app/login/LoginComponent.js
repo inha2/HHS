@@ -37,20 +37,19 @@ function LoginComponent() {
             password: loginPassword,
         };
         console.log(body);
-        navigate('/');
-        // await axios
-        //     .post('http://localhost:4000/v1/user', body)
-        //     .then((res) => {
-        //         console.log(res.status);
-        //         if (res.status === 200) {
-        //             alert('로그인 됐습니다.');
-        //             // navigate('/');
-        //         }
-        //     })
-        //     .catch((error) => {
-        //         console.log(error);
-        //         alert(error.response.data.error);
-        //     });
+        await axios
+            .post('http://localhost:4000/v1/user/login', body)
+            .then((res) => {
+                console.log(res.status);
+                if (res.status === 200) {
+                    alert('로그인 됐습니다.');
+                    navigate('/');
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+                alert(error.response.data.error);
+            });
     };
     const goMain = () => {
         navigate('/signup');

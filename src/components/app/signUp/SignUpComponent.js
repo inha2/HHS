@@ -62,7 +62,7 @@ function SignUpComponent() {
         };
 
         await axios
-            .post('http://localhost:4000/v1/user', body)
+            .post('http://localhost:4000/v1/user/singUp', body)
             .then((res) => {
                 console.log(res.status);
                 if (res.status === 201) {
