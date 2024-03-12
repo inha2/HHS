@@ -1,2 +1,42 @@
-
-
+.my-info-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+.my-info-section {
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    align-items: center;
+    padding: 30px 0px 30px 50px;
+}
+.my-info-section-right {
+    display: flex;
+    gap: 50px;
+}
+.my-info-section-right div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.my-info-section-right div p {
+    height: 20px;
+}
+.my-info-section-right div:first-child img {
+    width: 22px;
+    height: 16.5px;
+}
+.my-info-section-right div:nth-child(2) img {
+    width: 19px;
+    height: 16px;
+}
+.my-info-section-right div:nth-child(3) img {
+    width: 20px;
+    height: 20px;
+}
+.my-info-section-right div:nth-child(4) img {
+    width: 22px;
+    height: 16px;
+}

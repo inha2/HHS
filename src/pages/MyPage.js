@@ -1,11 +1,11 @@
-import MainComponent from '../components/app/main/MainComponent';
+import MyPageComponent from '../components/app/myPage/MyInfoComponent';
 
-function MainPage() {
+function MyPage() {
     return (
         <>
-            <MainComponent />
+            <MyPageComponent />
         </>
     );
 }
 
-export default MainPage;
+export default MyPage;

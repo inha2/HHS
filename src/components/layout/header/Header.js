@@ -6,6 +6,8 @@ function Header() {
     const [apparelHoverClassName, setApparelHoverClassName] = useState('header-apparel-content-section');
     const [accHoverClassName, setAccHoverClassName] = useState('header-etc-content-section');
     const [mouseOnFlag, setMouseOnFlag] = useState(0);
+    const [userId, setUserId] = useState('');
+
     const onMouseOverApparelHandle = () => {
         setAccHoverClassName('header-etc-content-section');
         setApparelHoverClassName('header-apparel-content-section-show');
@@ -37,6 +39,18 @@ function Header() {
     const goMain = () => {
         navigate('/');
     };
+
+    const logout = () => {
+        localStorage.removeItem('email');
+        localStorage.removeItem('userId');
+        localStorage.removeItem('token');
+        navigate('/');
+    };
+
+    useEffect(() => {
+        setUserId(localStorage.getItem('userId'));
+    });
+
     return (
         <div>
             <div>
@@ -61,11 +75,19 @@ function Header() {
                             </li>
                         </ul>
                     </div>
-                    <div className="header-accont-section">
-                        <ul>
-                            <li onClick={goLogin}>로그인</li>
-                            <li onClick={goSignup}>회원가입</li>
-                        </ul>
+                    <div className="header-account-section">
+                        {userId === null ? (
+                            <ul>
+                                <li onClick={goLogin}>로그인</li>
+                                <li onClick={goSignup}>회원가입</li>
+                            </ul>
+                        ) : (
+                            <ul>
+                                <li className="header-account-id">{userId} 님</li>
+                                <li>마이페이지</li>
+                                <li onClick={logout}>로그아웃</li>
+                            </ul>
+                        )}
                     </div>
                 </div>
                 <div className="header-nav-content-container">

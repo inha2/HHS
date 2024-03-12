@@ -41,14 +41,30 @@ function LoginComponent() {
             .post('http://localhost:4000/v1/user/login', body)
             .then((res) => {
                 console.log(res.status);
+                console.log(res.data.data.token);
                 if (res.status === 200) {
-                    alert('로그인 됐습니다.');
-                    navigate('/');
+                    const token = res.data.data.token;
+                    localStorage.setItem('token', token);
                 }
             })
             .catch((error) => {
                 console.log(error);
                 alert(error.response.data.error);
+            });
+        const token = localStorage.getItem('token');
+        await axios
+            .get('http://localhost:4000/v1/user/1/info', {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            })
+            .then((res) => {
+                console.log(res);
+                const userInfo = res.data.data.userInfo;
+                alert(`${userInfo.userId} 님 반갑습니다!!`);
+                localStorage.setItem('userId', userInfo.userId);
+                localStorage.setItem('email', userInfo.email);
+                navigate('/');
             });
     };
     const goMain = () => {
