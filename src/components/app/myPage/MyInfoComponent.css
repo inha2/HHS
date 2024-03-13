@@ -40,3 +40,44 @@
     width: 22px;
     height: 16px;
 }
+.my-info-section-left {
+    font-size: 30px;
+}
+.my-info-middle-section {
+    display: flex;
+    justify-content: space-between;
+}
+.my-info-middle-right-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding: 20px 0;
+}
+.my-info-middle-my-shopping {
+    color: #c4c4c4;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 20px 0;
+}
+.my-info-middle-my-review {
+    font-size: 16px;
+    font-weight: bold;
+}
+.my-info-middle-order {
+    font-size: 18px;
+    font-weight: bold;
+}
+table th {
+    padding: 12px 0;
+    background: #ffffff;
+    border: none;
+    color: #696969;
+    font-size: 13px;
+}
+table {
+    border: none;
+}
+.my-info-middle-all {
+    font-size: 14px;
+    color: #696969;
+}
